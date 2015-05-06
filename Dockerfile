@@ -13,9 +13,9 @@ RUN curl -SsfLO "http://mirrors.sonic.net/apache/hbase/hbase-1.0.1/hbase-1.0.1-b
 RUN cd .. && tar -xvf /opt/downloads/hbase-1.0.1-bin.tar.gz
 RUN mv /opt/hbase-1.0.1 /opt/hbase
 
-RUN mkdir -p /opt/tmp/hbase && mkdir -p /opt/tmp/zookeeper
-COPY conf/hbase-site.xml /opt/downloads/hbase/conf/
+COPY conf/hbase-site.xml /opt/hbase/conf/
+RUN mkdir -p /opt/tmp/zookeeper
 
-EXPOSE 80
+EXPOSE 80 60010
 
-CMD ["/opt/hbase/bin/hbase", "rest", "start"]
+CMD ["/opt/hbase/bin/hbase", "master", "start"]

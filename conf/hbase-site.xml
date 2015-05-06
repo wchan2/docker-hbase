@@ -27,6 +27,6 @@
   </property>
   <property>
     <name>hbase.zookeeper.property.dataDir</name>
-    <value>file:///opt/tmp/zookeeper</value>
+    <value>/opt/tmp/zookeeper</value>
   </property>
 </configuration>
