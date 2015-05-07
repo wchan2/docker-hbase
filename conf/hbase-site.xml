@@ -21,7 +21,7 @@
  */
 -->
 <configuration>
-	<property>
+  <property>
     <name>hbase.rootdir</name>
     <value>file:///opt/tmp/hbase</value>
   </property>
