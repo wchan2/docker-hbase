@@ -16,6 +16,6 @@ RUN mv /opt/hbase-1.0.1 /opt/hbase
 COPY conf/hbase-site.xml /opt/hbase/conf/
 RUN mkdir -p /opt/tmp/zookeeper
 
-EXPOSE 80 60010
+EXPOSE 2181 60000 60010 60020 60030
 
 CMD ["/opt/hbase/bin/hbase", "master", "start"]
