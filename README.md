@@ -11,6 +11,6 @@ docker build -t hbase-container .
 ### Running the image
 
 ```
-docker run -p 80:80 -td hbase-container:latest
+docker run -name hbase-1 -td hbase-container
 ```
 
